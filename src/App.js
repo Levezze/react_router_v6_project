@@ -11,6 +11,10 @@ import { RouterProvider, createBrowserRouter, createRoutesFromElements, Route } 
 const appRouter = createBrowserRouter(createRoutesFromElements(
   <Route path='/' element={ <Root /> }>
     <Route path='/' element={ <HomePage /> }/>
+    <Route path='/:type' element={ <HomePage /> }/>
+    <Route path='/:type/:id' element={ <PetDetailsPage /> }/>
+    <Route path='/search' element={ <SearchPage /> }/>
+    <Route path='/pet-details-not-found' element={ <PetDetailsNotFound /> }/>
   </Route>
 ));
 
